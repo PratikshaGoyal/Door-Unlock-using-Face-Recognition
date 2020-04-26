@@ -13,14 +13,9 @@ import os
 from os import listdir
 from os.path import isfile, join
 import webbrowser
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from email.mime.multipart import MIMEMultipart
 from twilio.rest import Client 
 import math, random 
 import time
-import easyimap
 import serial
 
 import sendmail
