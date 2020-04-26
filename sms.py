@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
+from twilio.rest import Client 
 import otp
 
 #send sms using twilio
