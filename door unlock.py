@@ -13,8 +13,6 @@ import os
 from os import listdir
 from os.path import isfile, join
 import webbrowser
-from twilio.rest import Client 
-import math, random 
 import time
 import serial
 
