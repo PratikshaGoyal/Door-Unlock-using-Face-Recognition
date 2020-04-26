@@ -236,7 +236,7 @@ while True:
         cv2.putText(image, "Locked", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 2)
 #         intr += 1
 #         cv2.imwrite("C://Users//Dell//Desktop//intruder//intruder" + str(intr) + '.jpg',frame)
-#         SendMail("C://Users//Dell//Desktop//intruder//intruder" + str(intr) + '.jpg')
+#         sendmail.SendMail("C://Users//Dell//Desktop//intruder//intruder" + str(intr) + '.jpg')
         cv2.imshow('Face Recognition', image )
         pass
         
