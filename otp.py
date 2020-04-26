@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
+import math, random 
 
 # function to generate OTP 
 def generateOTP() : 

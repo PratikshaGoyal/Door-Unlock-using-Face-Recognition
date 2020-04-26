@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+import easyimap
 
 #mail the picture of intruder
 
@@ -29,10 +32,3 @@ def SendMail(ImgFileName):
     s.login(Uname, Password)
     s.sendmail(From, To, msg.as_string())
     s.quit()
-
-
-# In[ ]:
-
-
-
-
