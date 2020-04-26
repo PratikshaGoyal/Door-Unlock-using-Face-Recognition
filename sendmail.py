@@ -5,11 +5,12 @@
 
 
 #mail the picture of intruder
-From= 'youremailaddress@gmail.com'
-To = 'youremailaddress@gmail.com'
-Uname = 'youremailaddress@gmail.com'
-Password = 'yourpassword'  
+
 def SendMail(ImgFileName):
+    From= 'youremailaddress@gmail.com'
+    To = 'youremailaddress@gmail.com'
+    Uname = 'youremailaddress@gmail.com'
+    Password = 'yourpassword'  
     img_data = open(ImgFileName, 'rb').read()
     msg = MIMEMultipart()
     msg['Subject'] = 'Intruder !!'
