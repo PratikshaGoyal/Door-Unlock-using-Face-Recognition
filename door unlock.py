@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import cv2
 import numpy as np
 import pyttsx3
@@ -18,10 +15,6 @@ import serial
 
 import sendmail
 import sms
-
-
-# In[ ]:
-
 
 # Load HAAR face classifier
 face_classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -42,9 +35,6 @@ def face_extractor(img):
         cropped_face = img[y:y+h, x:x+w]
 
     return cropped_face
-
-
-# In[ ]:
 
 
 # Initialize Webcam
@@ -84,9 +74,6 @@ cv2.destroyAllWindows()
 print("Collecting Samples Complete")
 
 
-# In[ ]:
-
-
 # Get the training data we previously made
 # a=listdir('d:/faces')
 # print(a)
@@ -121,9 +108,6 @@ model.write(f'{data_path}//trainer.yml')
 print("Model saved sucessefully")
 
 
-# In[ ]:
-
-
 try:
     ser = serial.Serial('COM10',9600,timeout=0)
 except:
@@ -145,9 +129,6 @@ def face_detector(img, size=0.5):
         roi = img[y:y+h, x:x+w]
         roi = cv2.resize(roi, (200, 200))
     return img, roi
-
-
-# In[ ]:
 
 
 # Open Webcam
@@ -254,8 +235,8 @@ while True:
         cv2.putText(image, "No Face Found", (220, 120) , cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 2)
         cv2.putText(image, "Locked", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 2)
 #         intr += 1
-#         cv2.imwrite("C://Users//Dell//Desktop//7th sem proj//intruder//intruder" + str(intr) + '.jpg',frame)
-#         SendMail("C://Users//Dell//Desktop//7th sem proj//intruder//intruder" + str(intr) + '.jpg')
+#         cv2.imwrite("C://Users//Dell//Desktop//intruder//intruder" + str(intr) + '.jpg',frame)
+#         SendMail("C://Users//Dell//Desktop//intruder//intruder" + str(intr) + '.jpg')
         cv2.imshow('Face Recognition', image )
         pass
         
